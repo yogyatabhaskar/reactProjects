@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  border-radius: 0.5rem;
+  width: 28rem;
+
+  &__card {
+    width: 100%;
+    background-color: #f1e6ea;
+  }
+
+  &__title {
+    color: #333638;
+    margin-left: 2rem;
+  }
+
+  &__btn {
+    display: block;
+    width: 80%;
+    border-color: transparent;
+    border: 0;
+    padding: 0.5rem;
+    background-color: #f28ab2;
+    margin: 1rem auto;
+    border-radius: 0.5rem;
+    color: #f1e6ea;
+  }
+}

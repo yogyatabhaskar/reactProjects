@@ -1,16 +1,22 @@
-function Card({ data, handleClick }) {
-  return data.map((person) => {
-    <div className="card">
-      <img className="card__img" src={person.image} alt={person.name} />
+import "./Card.scss";
 
-      <div className="card__details">
-        <p>{person.name}</p>
-        <p>{person.age}</p>
-      </div>
+function Card({ data }) {
+  return (
+    <>
+      {data.map((person) => {
+        return (
+          <div key={person.id} className="card">
+            <img className="card__img" src={person.image} alt={person.name} />
 
-      <button onClick={handleClick}>Clear All</button>
-    </div>;
-  });
+            <div className="card__details">
+              <p className="card__name">{person.name}</p>
+              <p className="card__age">{person.age} years</p>
+            </div>
+          </div>
+        );
+      })}
+    </>
+  );
 }
 
 export default Card;

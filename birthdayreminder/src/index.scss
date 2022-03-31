@@ -2,12 +2,15 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  background-color: #333333;
-  color: aliceblue;
 }
 
 body {
+  height: 100vh;
+  background-color: #f28ab2;
   margin: 0;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

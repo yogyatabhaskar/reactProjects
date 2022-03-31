@@ -1,23 +1,31 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import Card from "./components/Card/Card";
 import birthdayData from "./data/birthdays.json";
+import "./App.scss";
 
 class App extends Component {
   state = {
-    birthdayData,
+    birthdayDetails: birthdayData,
   };
 
   handleClick = () => {
     this.setState({
-      birthdayData: [],
+      birthdayDetails: [],
     });
   };
 
   render() {
     return (
       <div className="container">
-        <h2>{birthdayData.length} birthdays today</h2>
-        <Card data={birthdayData} handleClick={this.handleClick} />
+        <div className="container__card">
+          <h2 className="container__title">
+            {this.state.birthdayDetails.length} Birthdays Today
+          </h2>
+          <Card data={this.state.birthdayDetails} />
+          <button className="container__btn" onClick={this.handleClick}>
+            Clear All
+          </button>
+        </div>
       </div>
     );
   }
