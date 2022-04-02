@@ -1,14 +1,18 @@
-import Tour from "./components/Tour/Tour";
+import React, { Component } from "react";
+// import axios from "axios";
+import Tours from "./components/Tours/Tours";
 
-const url = "https://course-api.com/react-tours-project";
+const API_URL = "https://course-api.com/react-tours-project";
 
-function App() {
-  return (
-    <div className="container">
-      <h2 className="container__title">Our Tours</h2>
-      <Tour />
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="container">
+        <h2 className="container__title">Our Tours</h2>
+        <Tours />
+      </div>
+    );
+  }
 }
 
 export default App;
